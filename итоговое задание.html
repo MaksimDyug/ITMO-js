@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Первые шаги в мире IT</title>
+</head>
+<body>
+<main>
+    <section>
+        <header>
+            <h3>Здесь могла бы быть Ваша реклама!!!</h3>
+        </header>
+        <textarea id="t1" cols=40 rows=5>Введите сообщение c текстом для размещения Вашей рекламы</textarea><br>
+        Введите адрес электронной почты  <input id="em" type="email" required><br>
+        Введите пароль  <input type="password" id="pas" size=38 required><br>
+        <button id="but">Направить запрос на размещение</button><br>
+
+        <script type="text/javascript">
+            document.getElementById("but").addEventListener("click", function () {
+                var em = document.getElementById("em"), pas = document.getElementById("pas"), t1 = document.getElementById("t1");
+                if (em.value != "dyugmi" || pas.value != "123") {
+                    em.value = "";
+                    pas.value = "";
+                    alert("Неправильный email или пароль");
+                }
+                if (em.value == "dyugmi" || pas.value == "123") {
+                    em.value = "";
+                    pas.value = "";
+                    alert("Запрос на размещение направлен");
+                }
+                if (t1.value.length < 1) {
+                    t1.value = "";
+                    alert("Поле обязательно для заполнения");
+                }   
+            });
+        </script>
+        <div id="vik">Продам гараж. <a href=#>Викторов В.В.</a></div>
+        <div id="pup">Куплю гараж.<a href=#>Пупкин В.В.</a></div>
+        <div id="pet">Бьюти услуги.<a href=#>Петрова А.А.</a></div>
+    </section>
+                    <section>
+                        <article>
+                            <header align="center">
+                                <h1>Трамп и Байден любят есть гречу в одиночестве</h1>
+                            </header>
+                            <p>  По оперативным каналам связи поступила информация о том,
+                                что Джо Байден и Дональд Трамп весьма неравнодушны к гречке. Однако данна информация
+                                тщательно скрывается. С Вами были <a href=#>"Экстренные новости"</a><br>
+                                    <img width="1000" src="https://img.pravda.com/images/doc/1/a/1ab45ba-1f18957-dca8fa4-biden-trump.jpg">
+                                    </p>
+                                </article>
+                                <article>
+                                    <header align="center"> <h1>Бурый медведь начал стремительно эволюционировать</h1>
+                                    </header>
+                                    <p>
+                                        В Новосибирке бурый медведь не только ннаучился говорить, он еще и носит галстук.
+                                        Однако заставить медведя ходить на работу, пока еще никому не удалось.
+                                        Кому же удастся это сделать?
+                                        <ol><li id="dy">Дуров В.Л.</li>
+                                            <li>Запашный В.М.</li>
+                                            <li>Кио Э.Т.</li>
+                                        </ol>
+                                        <img width="100" src="https://www.meme-arsenal.com/memes/05b7fde59cd3bb5615a42d19e619bf6d.jpg">
+                                        </P>
+                                </article>
+                                <article>
+                                    <header align="center">
+                                        <h1>Опять "двойка"</h1>
+                                    </header>
+                                    <p>
+                                        В Нижнекамске в очередной раз возобновили движение автобуса следующего по маршруту
+                                        "2". Действительно впечатляет то, что возобнавляют его уже в пятый раз за 2022 год.
+                                        <img width="100" src="https://bryansk.news/wp-content/uploads/2020/02/bus_2-1024x768.jpg"></P>
+                                </article>
+                            </section>
+                        </main >
+                        <footer>
+                            <center>Saint-P. 2022 </center>
+                        </footer>
+</body>
+</html>

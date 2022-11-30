@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <title>формa</title>
+    <script language="JavaScript">
+        function doSend() {
+            var v = document.user.e.value.indexOf("@", 1)
+            if (document.user.f.value == "") {
+                alert('Вы должны заполнить поле ФИО')
+                document.user.f.select()
+                document.user.f.focus()
+            }
+            if (document.user.pas.value != document.user.pas2.value || document.user.pas2.value.length < 4 || document.user.pas.value.length < 4) {
+                alert('Пароли не соответствуют')
+                document.user.pas.select()
+                document.user.pas.focus()
+            }
+            if (document.user.tex.value.length < 10) {
+                alert('Минимальный объем 10 символов')
+                document.user.tex.select()
+                document.user.tex.focus()
+            }
+            if (document.user.e.value == "") {
+                alert('Вы должны заполнить поле e-mail')
+                document.user.e.select()
+                document.user.e.focus()
+            }
+            if (v == -1) {
+                alert('Адрес e-mail указан неверно')
+                document.user.e.select()
+                document.user.e.focus()
+            }
+        }
+    </script>
+</head>
+<body>
+    <p align="center">
+        <font size=6>Данные о пользователе</font>
+        <form name="user">
+            <b>Пожалуйста, укажите данные о себе:</b>
+            <br>
+            Ваше имя<input type="text" name="f" size="30"><br>
+            Пароль:*<input type="text" name="pas" size=10 required><br>
+            Потверждение пароля:*<input type="text" name="pas2" size=10 required><br>
+            Электронный адрес*<input type="text" name="e" size="30"><br>
+            Тема сообщения:<input type="text" size=15 required><br>
+            Сообщение:<textarea id="tex" cols=16 rows=5></textarea><br>
+            <input type="button" value="Отправить" onClick="doSend()">
+            <input type="reset" value="Очистить">
+        </form>
+    </p>
+</body>
+</html>

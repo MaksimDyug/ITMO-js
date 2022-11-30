@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>window</title>
+</head>
+<body id="b" bgcolor="white">
+    <a id="elem">PDF file</a>
+    <a id="elem2"> изменение цвета фона</a>
+    <script language="JavaScript" type="text/JavaScript">
+        document.getElementById("elem2").onmouseover = function () {
+            b.style.backgroundColor = "red";
+        }
+        document.getElementById("elem2").onmouseout = function () {
+            b.style.backgroundColor = "white";
+        }
+        document.getElementById("elem").onclick = function () {
+        if (confirm("для загрузки документа требуется программа Acrobat"))
+          window.open("ex12.pdf");
+          }
+    </script>
+</body>
+</html>
+   
