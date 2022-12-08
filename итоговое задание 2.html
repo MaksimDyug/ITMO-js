@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+    <title>Первые шаги в мире IT</title>
+    <script language="JavaScript">
+        function doSend() {
+            var v = document.user.e.value.indexOf("@", 1)
+            if (document.user.e.value == "") {
+                alert('Вы должны заполнить поле электронный адрес')
+                document.user.f.select()
+                document.user.f.focus()
+            }
+            if (document.user.e.value != "dyugmi@mail.com" || document.user.pas.value != "123") {
+                document.user.e.value = "";
+                document.user.pas.value = "";
+                alert("Неправильный email или пароль");
+            }
+            if (document.user.tex.value.length < 10) {
+                alert('Минимальный объем 10 символов')
+                document.user.tex.select()
+                document.user.tex.focus()
+            }
+            if (v == -1) {
+                alert('Адрес e-mail указан неверно')
+                document.user.e.select()
+                document.user.e.focus()
+            }
+            if (document.user.e.value == "dyugmi@mail.com" && document.user.pas.value == "123" && document.user.tex.value.length > 10) {
+                document.user.e.value = "";
+                document.user.pas.value = "";
+                document.user.tex.value = "";
+                alert("Запрос на размещение направлен");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p align="center">
+        <font size=5>Данные о пользователе</font>
+        <form name="user">
+            <b>Здесь могла бы быть Ваша реклама</b><br>
+            Сообщение:<textarea id="tex" cols=16 rows=5>Введеите сообщение с текстом для размещения Вашей рекламы!</textarea><br>
+            Введите Ваш электронный адрес<input type="text" name="e" size="30"><br>
+            Пароль:<input type="text" id="pas" size=10 required><br>
+            <input type="button" value="Отправить" onClick="doSend()">
+            <input type="reset" value="Очистить">
+        </form>
+    </p>
+    <div id="vik">Продам гараж. <a href=#>Викторов В.В.</a></div>
+    <div id="pup">Куплю гараж.<a href=#>Пупкин В.В.</a></div>
+    <div id="pet">Бьюти услуги.<a href=#>Петрова А.А.</a></div>
+    <section>
+        <article>
+            <header align="center">
+                <h1>Трамп и Байден любят есть гречу в одиночестве</h1>
+            </header>
+            <p>
+                По оперативным каналам связи поступила информация о том,
+                что Джо Байден и Дональд Трамп весьма неравнодушны к гречке. Однако данна информация
+                тщательно скрывается. С Вами были <a href=#>"Экстренные новости"</a><br>
+                <img width="1000" src="https://img.pravda.com/images/doc/1/a/1ab45ba-1f18957-dca8fa4-biden-trump.jpg">
+            </p>
+        </article>
+        <article>
+            <header align="center">
+                <h1>Бурый медведь начал стремительно эволюционировать</h1>
+            </header>
+            <p>
+                В Новосибирке бурый медведь не только ннаучился говорить, он еще и носит галстук.
+                Однако заставить медведя ходить на работу, пока еще никому не удалось.
+                Кому же удастся это сделать?
+                <ol>
+                    <li id="dy">Дуров В.Л.</li>
+                    <li>Запашный В.М.</li>
+                    <li>Кио Э.Т.</li>
+                </ol>
+                <img width="100" src="https://www.meme-arsenal.com/memes/05b7fde59cd3bb5615a42d19e619bf6d.jpg">
+            </p>
+        </article>
+        <article>
+            <header align="center">
+                <h1>Опять "двойка"</h1>
+            </header>
+            <p>
+                В Нижнекамске в очередной раз возобновили движение автобуса следующего по маршруту
+                "2". Действительно впечатляет то, что возобнавляют его уже в пятый раз за 2022 год.
+                <img width="100" src="https://bryansk.news/wp-content/uploads/2020/02/bus_2-1024x768.jpg">
+            </p>
+        </article>
+    </section>
+    <footer>
+        <center>Saint-P. 2022 </center>
+    </footer>
+</body>
+</html>
